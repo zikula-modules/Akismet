@@ -16,10 +16,10 @@
 function akismet_init() 
 {
 	// create module settings
-    pnModSetVar('akismet', 'enable', false);
-    pnModSetVar('akismet', 'apikey', '');
-    pnModSetVar('akismet', 'apikeyvalid', false);
-    pnModSetVar('akismet', 'count', 0);
+    ModUtil::setVar('akismet', 'enable', false);
+    ModUtil::setVar('akismet', 'apikey', '');
+    ModUtil::setVar('akismet', 'apikeyvalid', false);
+    ModUtil::setVar('akismet', 'count', 0);
 
     // Initialisation successful
     return true;
@@ -39,7 +39,7 @@ function akismet_upgrade($oldversion)
 function akismet_delete() 
 {
 	// delete all module vars
-    pnModDelVar('akismet');
+    ModUtil::delVar('akismet');
 
     // Deletion successful
     return true;

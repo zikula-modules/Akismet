@@ -30,7 +30,7 @@ function akismet_userapi_verifykey($args)
     _akismet_userapi_loadclass();
 
     // create the new object
-    $akismet = new Akismet(pnGetBaseURL(), $args['apikey'], false);
+    $akismet = new Akismet(System::getBaseUrl(), $args['apikey'], false);
 
     // verify the key
     return $akismet->isKeyValid();
@@ -59,7 +59,7 @@ function akismet_userapi_isspam($args)
     _akismet_userapi_loadclass();
 
     // create the new object
-    $akismet = new Akismet(pnGetBaseURL(), pnModGetVar('akismet', 'apikey'));
+    $akismet = new Akismet(System::getBaseUrl(), ModUtil::getVar('akismet', 'apikey'));
 
     // set the comment parameters
     $akismet->setCommentAuthor(isset($args['author']) ? $args['author'] : '');
@@ -70,7 +70,7 @@ function akismet_userapi_isspam($args)
 
     // is it spam?
     if ($akismet->isCommentSpam()) {
-        pnModSetVar('akismet', 'count', pnModGetVar('akismet', 'count') + 1);
+        ModUtil::setVar('akismet', 'count', ModUtil::getVar('akismet', 'count') + 1);
         return true;
     } else {
         return false;
@@ -100,7 +100,7 @@ function akismet_userapi_submitspam($args)
     _akismet_userapi_loadclass();
 
     // create the new object
-    $akismet = new Akismet(pnGetBaseURL(), pnModGetVar('akismet', 'apikey'));
+    $akismet = new Akismet(System::getBaseUrl(), ModUtil::getVar('akismet', 'apikey'));
 
     // set the comment parameters
     $akismet->setCommentAuthor(isset($args['author']) ? $args['author'] : '');
@@ -136,7 +136,7 @@ function akismet_userapi_submitham($args)
     _akismet_userapi_loadclass();
 
     // create the new object
-    $akismet = new Akismet(pnGetBaseURL(), pnModGetVar('akismet', 'apikey'));
+    $akismet = new Akismet(System::getBaseUrl(), ModUtil::getVar('akismet', 'apikey'));
 
     // set the comment parameters
     $akismet->setCommentAuthor(isset($args['author']) ? $args['author'] : '');
