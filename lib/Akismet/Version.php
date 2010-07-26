@@ -20,5 +20,6 @@ class Akismet_Version extends Zikula_Version
         $meta['version'] = '2.0.0';
         $meta['description'] = __('Akismet spam detection service');
         $meta['securityschema'] = array('Akismet::' => '::');
+        return $meta;
     }
 }
