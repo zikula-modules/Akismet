@@ -7,16 +7,13 @@
  * @license GNU/GPL - http://www.gnu.org/copyleft/gpl.html
  */
 
+require_once 'modules/Akismet/lib/Akismet/vendor/Akismet.class.5.php';
+
 /**
  * API class.
  */
 class Akismet_Api_User extends Zikula_Api
 {
-
-    public function postInitialize()
-    {
-        $this->_loadclass();
-    }
     /**
      * verify an akismet key
      *
@@ -139,17 +136,4 @@ class Akismet_Api_User extends Zikula_Api
         // is it spam?
         return $akismet->submitHam();
     }
-
-    /**
-     * load the class for our php version
-     *
-     * @access private
-     * @author Mark West
-     * @return void
-     */
-    private function _loadclass()
-    {
-        require_once 'modules/Akismet/lib/Akismet/vendor/Akismet.class.5.php';
-    }
-
 }
