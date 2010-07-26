@@ -13,6 +13,10 @@
 class Akismet_Api_User extends Zikula_Api
 {
 
+    public function postInitialize()
+    {
+        $this->_loadclass();
+    }
     /**
      * verify an akismet key
      *
@@ -27,9 +31,6 @@ class Akismet_Api_User extends Zikula_Api
         if (!isset($args['apikey'])) {
             return LogUtil::registerArgsError();
         }
-
-        // load the akismet class
-        $this->_loadclass();
 
         // create the new object
         $akismet = new Akismet(System::getBaseUrl(), $args['apikey'], false);
@@ -55,9 +56,6 @@ class Akismet_Api_User extends Zikula_Api
         if (!isset($args['content'])) {
             return LogUtil::registerArgsError();
         }
-
-        // load the akismet class
-        $this->_loadclass();
 
         // create the new object
         $akismet = new Akismet(System::getBaseUrl(), $this->getVar('apikey'));
@@ -96,9 +94,6 @@ class Akismet_Api_User extends Zikula_Api
             return LogUtil::registerArgsError();
         }
 
-        // load the akismet class
-        $this->_loadclass();
-
         // create the new object
         $akismet = new Akismet(System::getBaseUrl(), $this->getVar('apikey'));
 
@@ -131,11 +126,8 @@ class Akismet_Api_User extends Zikula_Api
             return LogUtil::registerArgsError();
         }
 
-        // load the akismet class
-        $this->_loadclass();
-
         // create the new object
-        $akismet = new Akismet(System::getBaseUrl(), ModUtil::getVar('akismet', 'apikey'));
+        $akismet = new Akismet(System::getBaseUrl(), $this->getVar('apikey'));
 
         // set the comment parameters
         $akismet->setCommentAuthor(isset($args['author']) ? $args['author'] : '');
@@ -157,7 +149,7 @@ class Akismet_Api_User extends Zikula_Api
      */
     private function _loadclass()
     {
-        require_once 'modules/akismet/includes/Akismet.class.5.php';
+        require_once 'modules/Akismet/lib/Akismet/vendor/Akismet.class.5.php';
     }
 
 }
