@@ -1,13 +1,11 @@
 <?php
+
 /**
  * Akismet integrator API for Zikula
  *
- * @author Mark West
- * @link http://www.markwest.me.uk
  * @license GNU/GPL - http://www.gnu.org/copyleft/gpl.html
  */
-
-class Akismet_Version extends Zikula_Version
+class Akismet_Version extends Zikula_AbstractVersion
 {
 
     public function getMetaData()
@@ -22,4 +20,5 @@ class Akismet_Version extends Zikula_Version
         $meta['securityschema'] = array('Akismet::' => '::');
         return $meta;
     }
+
 }

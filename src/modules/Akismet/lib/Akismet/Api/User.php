@@ -1,24 +1,18 @@
 <?php
+
 /**
  * Akismet integrator API for Zikula
  *
- * @author Mark West
- * @link http://www.markwest.me.uk
  * @license GNU/GPL - http://www.gnu.org/copyleft/gpl.html
  */
-
 require_once 'modules/Akismet/lib/vendor/Akismet.class.5.php';
 
-/**
- * API class.
- */
-class Akismet_Api_User extends Zikula_Api
+class Akismet_Api_User extends Zikula_AbstractApi
 {
+
     /**
      * verify an akismet key
      *
-     * @author Mark West
-     * @access private
      * @param $args['apikey'] The key to verify
      * @return bool true if API key is valid, false otherwise
      */
@@ -39,7 +33,6 @@ class Akismet_Api_User extends Zikula_Api
     /**
      * pass the comment to the akismet service to check if the comment is spam
      *
-     * @author Mark West
      * @param $args['author'] string author (optional)
      * @param $args['authoremail'] string author E-mail address (optional)
      * @param $args['authorurl'] string author URL (optional)
@@ -76,7 +69,6 @@ class Akismet_Api_User extends Zikula_Api
     /**
      * notify akismet of a comment that is spam
      *
-     * @author Mark West
      * @param $args['author'] string author (optional)
      * @param $args['authoremail'] string author E-mail address (optional)
      * @param $args['authorurl'] string author URL (optional)
@@ -101,14 +93,12 @@ class Akismet_Api_User extends Zikula_Api
         $akismet->setCommentContent($args['content']);
         $akismet->setPermalink(isset($args['permalink']) ? $args['permalink'] : '');
 
-        // is it spam?
         return $akismet->submitSpam();
     }
 
     /**
      * notify akismet of a comment that isn't spam (ham!)
      *
-     * @author Mark West
      * @param $args['author'] string author (optional)
      * @param $args['authoremail'] string author E-mail address (optional)
      * @param $args['authorurl'] string author URL (optional)
@@ -133,7 +123,7 @@ class Akismet_Api_User extends Zikula_Api
         $akismet->setCommentContent($args['content']);
         $akismet->setPermalink(isset($args['permalink']) ? $args['permalink'] : '');
 
-        // is it spam?
         return $akismet->submitHam();
     }
+
 }
