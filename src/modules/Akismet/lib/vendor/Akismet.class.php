@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Akismet anti-comment spam service
  *
@@ -14,11 +15,11 @@
  *
  * See the Akismet class documentation page linked to below for usage information.
  *
- * @package Akismet
- * @author Alex Potsides, {@link http://www.achingbrain.net http://www.achingbrain.net}
- * @version 0.4
- * @copyright Alex Potsides, {@link http://www.achingbrain.net http://www.achingbrain.net}
- * @license http://www.opensource.org/licenses/bsd-license.php BSD License
+ * @package		akismet
+ * @author		Alex Potsides, {@link http://www.achingbrain.net http://www.achingbrain.net}
+ * @version		0.4
+ * @copyright	Alex Potsides, {@link http://www.achingbrain.net http://www.achingbrain.net}
+ * @license		http://www.opensource.org/licenses/bsd-license.php BSD License
  */
 
 /**
@@ -60,7 +61,8 @@
  *  @author		Alex Potsides
  *  @link		http://www.achingbrain.net/
  */
-class Akismet {
+class Akismet
+	{
 	private $version = '0.4';
 	private $wordPressAPIKey;
 	private $blogURL;
@@ -84,10 +86,8 @@ class Akismet {
 							'PHP_SELF' );
 	
 	/**
-	 *	@throws	Exception	An exception is thrown if your API key is invalid.
 	 *	@param	string	$blogURL			The URL of your blog.
 	 *	@param	string	$wordPressAPIKey	WordPress API key.
-	 *	@param	bool 		$validateAPIKey 		Validate the API key (default: true)
 	 */
 	public function __construct($blogURL, $wordPressAPIKey) {
 		$this->blogURL = $blogURL;
@@ -115,12 +115,6 @@ class Akismet {
 		 * PHP5 one...
 		 */
 		$this->comment['user_ip'] = $_SERVER['REMOTE_ADDR'] != getenv('SERVER_ADDR') ? $_SERVER['REMOTE_ADDR'] : getenv('HTTP_X_FORWARDED_FOR');
-
-		// Check to see if the key is valid
-		if ($validateAPIKey && !$this->isKeyValid()) {
-			// Whoops, no it's not.  Throw an exception as we can't proceed without a valid API key.
-			throw new Exception('Invalid API key. Please obtain one from http://wordpress.com/api-keys/');
-		}
 	}
 	
 	/**

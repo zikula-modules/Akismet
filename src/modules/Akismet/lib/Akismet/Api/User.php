@@ -5,7 +5,7 @@
  *
  * @license GNU/GPL - http://www.gnu.org/copyleft/gpl.html
  */
-require_once 'modules/Akismet/lib/vendor/Akismet.class.5.php';
+require_once 'modules/Akismet/lib/vendor/Akismet.class.php';
 
 class Akismet_Api_User extends Zikula_AbstractApi
 {
