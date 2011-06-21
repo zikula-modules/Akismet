@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Zikula 1.2.x\n"
+"Project-Id-Version: Zikula 1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-27 09:02+0000\n"
+"POT-Creation-Date: 2011-06-21 20:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,68 +16,72 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: pnadmin.php:82
+#: lib/Akismet/Controller/Admin.php:50
 msgid ""
 "Error! Sorry! Invalid API key. Please obtain one from http://wordpress.com/"
 "api-keys/."
 msgstr ""
 
-#: pnadmin.php:94
+#: lib/Akismet/Controller/Admin.php:62
 msgid "Done! Module configuration updated."
 msgstr ""
 
-#: pnversion.php:16
+#: lib/Akismet/Version.php:15
 msgid "Akismet"
 msgstr ""
 
 #. ! module url in lowercase and different from displayname
-#: pnversion.php:18
+#: lib/Akismet/Version.php:17
 msgid "akismet"
 msgstr ""
 
-#: pnversion.php:20 pntemplates/akismet_admin_modifyconfig.htm:4
+#: lib/Akismet/Version.php:19 templates/akismet_admin_modifyconfig.tpl:3
 msgid "Akismet spam detection service"
 msgstr ""
 
-#: pntemplates/akismet_admin_modifyconfig.htm:7
-#: pntemplates/akismet_admin_modifyconfig.htm:8
+#: templates/akismet_admin_modifyconfig.tpl:6
+#: templates/akismet_admin_modifyconfig.tpl:7
 msgid "Settings"
 msgstr ""
 
-#: pntemplates/akismet_admin_modifyconfig.htm:9
+#: templates/akismet_admin_modifyconfig.tpl:8
+#, php-format
 msgid ""
-"<a href=\"http://akismet.com/\">Akismet</a> is a spam detection service that "
-"can, in many cases, eliminate comment and trackback spam. To use akismet you "
-"need an <a href=\"http://wordpress.com/api-keys/\">API key</a>. Simply "
-"signup for an account at wordpress.com but don't create a blog - your API "
-"key will be in your profile."
+"%s is a spam detection service that can, in many cases, eliminate comment "
+"and trackback spam. To use akismet you need an %s. Simply signup for an "
+"account at wordpress.com but don't create a blog - your API key will be in "
+"your profile."
 msgstr ""
 
-#: pntemplates/akismet_admin_modifyconfig.htm:10
+#: templates/akismet_admin_modifyconfig.tpl:9
 #, php-format
 msgid "Akismet has caught <strong>%s spam</strong> for you so far."
 msgstr ""
 
-#: pntemplates/akismet_admin_modifyconfig.htm:11
+#: templates/akismet_admin_modifyconfig.tpl:10
 msgid ""
 "To test akismet is functioning submit some content with the author name of "
 "\"viagra-test-123\". This is automatically treated as spam by akismet."
 msgstr ""
 
-#: pntemplates/akismet_admin_modifyconfig.htm:17
+#: templates/akismet_admin_modifyconfig.tpl:16
 msgid "Enable akismet"
 msgstr ""
 
-#: pntemplates/akismet_admin_modifyconfig.htm:25
+#: templates/akismet_admin_modifyconfig.tpl:20
 msgid "Wordpress.com API key"
 msgstr ""
 
-#: pntemplates/akismet_admin_modifyconfig.htm:28
+#: templates/akismet_admin_modifyconfig.tpl:23
 msgid ""
 "Your API key is invalid. Please obtain one from <a href=\"http://wordpress."
 "com/api-keys/\">http://wordpress.com/api-keys/</a>."
 msgstr ""
 
-#: pntemplates/akismet_admin_modifyconfig.htm:34
-msgid "Update Configuration"
+#: templates/akismet_admin_modifyconfig.tpl:28
+msgid "Save"
+msgstr ""
+
+#: templates/akismet_admin_modifyconfig.tpl:29
+msgid "Cancel"
 msgstr ""
