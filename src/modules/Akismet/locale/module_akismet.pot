@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zikula 1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-21 20:11+0000\n"
+"POT-Creation-Date: 2011-07-21 21:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,16 +35,15 @@ msgstr ""
 msgid "akismet"
 msgstr ""
 
-#: lib/Akismet/Version.php:19 templates/akismet_admin_modifyconfig.tpl:3
+#: lib/Akismet/Version.php:19
 msgid "Akismet spam detection service"
 msgstr ""
 
-#: templates/akismet_admin_modifyconfig.tpl:6
-#: templates/akismet_admin_modifyconfig.tpl:7
-msgid "Settings"
+#: templates/akismet_admin_modifyconfig.tpl:4
+msgid "Akismet settings"
 msgstr ""
 
-#: templates/akismet_admin_modifyconfig.tpl:8
+#: templates/akismet_admin_modifyconfig.tpl:7
 #, php-format
 msgid ""
 "%s is a spam detection service that can, in many cases, eliminate comment "
@@ -53,35 +52,35 @@ msgid ""
 "your profile."
 msgstr ""
 
-#: templates/akismet_admin_modifyconfig.tpl:9
+#: templates/akismet_admin_modifyconfig.tpl:8
 #, php-format
 msgid "Akismet has caught <strong>%s spam</strong> for you so far."
 msgstr ""
 
-#: templates/akismet_admin_modifyconfig.tpl:10
+#: templates/akismet_admin_modifyconfig.tpl:9
 msgid ""
 "To test akismet is functioning submit some content with the author name of "
 "\"viagra-test-123\". This is automatically treated as spam by akismet."
 msgstr ""
 
-#: templates/akismet_admin_modifyconfig.tpl:16
+#: templates/akismet_admin_modifyconfig.tpl:15
 msgid "Enable akismet"
 msgstr ""
 
-#: templates/akismet_admin_modifyconfig.tpl:20
+#: templates/akismet_admin_modifyconfig.tpl:19
 msgid "Wordpress.com API key"
 msgstr ""
 
-#: templates/akismet_admin_modifyconfig.tpl:23
+#: templates/akismet_admin_modifyconfig.tpl:22
 msgid ""
 "Your API key is invalid. Please obtain one from <a href=\"http://wordpress."
 "com/api-keys/\">http://wordpress.com/api-keys/</a>."
 msgstr ""
 
-#: templates/akismet_admin_modifyconfig.tpl:28
+#: templates/akismet_admin_modifyconfig.tpl:27
 msgid "Save"
 msgstr ""
 
-#: templates/akismet_admin_modifyconfig.tpl:29
+#: templates/akismet_admin_modifyconfig.tpl:28
 msgid "Cancel"
 msgstr ""
