@@ -5,7 +5,7 @@
  *
  * @license GNU/GPL - http://www.gnu.org/copyleft/gpl.html
  */
-require_once 'modules/Akismet/lib/vendor/Akismet.class.php';
+require_once 'modules/Akismet/lib/vendor/php5-akismet/src/main/php/net/achingbrain/Akismet.class.php';
 
 class Akismet_Api_User extends Zikula_AbstractApi
 {
@@ -42,6 +42,11 @@ class Akismet_Api_User extends Zikula_AbstractApi
      */
     public function isspam($args)
     {
+        // check if enabled and valid key
+        if (!$this->getVar('enable') || !$this->getVar('apikeyvalid')) {
+            LogUtil::registerWarning($this->__('Akismet is not properly set up for API use. Returning all content as valid.'));
+            return false;
+        }
         // argument check
         if (!isset($args['content'])) {
             return LogUtil::registerArgsError();
