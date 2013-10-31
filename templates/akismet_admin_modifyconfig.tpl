@@ -4,7 +4,7 @@
     <h3>{gt text="Akismet settings"}</h3>
 </div>
 
-<p class='z-informationmsg'>{gt text="%1$s is a spam detection service that can, in many cases, eliminate comment and trackback spam. To use akismet you need an %2$s. Simply signup for an account at wordpress.com but don't create a blog - your API key will be in your profile." tag1="<a href='http://akismet.com/'>Akismet</a>" tag2="<a href='http://wordpress.com/api-keys/'>API key</a>"}</p>
+<p class='z-informationmsg'>{gt text='%1$s is a spam detection service that can, in many cases, eliminate comment and trackback spam. To use akismet you need an %2$s. Simply signup for an account at wordpress.com but don\'t create a blog - your API key will be in your profile.' tag1="<a href='http://akismet.com/'>Akismet</a>" tag2="<a href='http://wordpress.com/api-keys/'>API key</a>"}</p>
 <p class='z-informationmsg'>{gt text='Akismet has caught <strong>%s spam</strong> for you so far.' tag1=$modvars.Akismet.count}</p>
 <p class='z-informationmsg'>{gt text='To test akismet is functioning submit some content with the author name of "viagra-test-123". This is automatically treated as spam by akismet.'}</p>
 <form class="z-form" action="{modurl modname='Akismet' type='admin' func='updateconfig'}" method="post" enctype="application/x-www-form-urlencoded">
