@@ -15,7 +15,7 @@ class Akismet_Version extends Zikula_AbstractVersion
         $meta['displayname'] = __('Akismet');
         //! module url in lowercase and different from displayname
         $meta['url'] = __('akismet');
-        $meta['version'] = '2.0.0';
+        $meta['version'] = '2.1.0';
         $meta['description'] = __('Akismet spam detection service');
         $meta['securityschema'] = array('Akismet::' => '::');
         return $meta;
